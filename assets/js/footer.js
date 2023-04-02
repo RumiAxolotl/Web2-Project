@@ -1,4 +1,5 @@
-var footer = document.getElementById("footer");
+function generateFooter() {
+  var footer = document.getElementById("footer");
   if (footer) {
     footer.innerHTML = `
     <div class="bg-dark text-white pt-4 pb-3">
@@ -75,3 +76,4 @@ var footer = document.getElementById("footer");
     </div>
 `;
   }
+}
