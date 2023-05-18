@@ -66,7 +66,7 @@
                     document.getElementById("error3").innerHTML = "";
                 }
                 if(document.getElementById("address").value.length == 0){
-                    document.getElementById("error4").innerHTML = "Where do you live?";
+                    document.getElementById("error4").innerHTML = "Where defuq u live?";
                 } else{
                     document.getElementById("error4").innerHTML = "";
                 }

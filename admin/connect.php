@@ -1,4 +1,4 @@
 <?php
-    $connect=mysqli_connect("localhost","root","","cnc");
+    $connect=mysqli_connect("localhost","root","","web2");
    
 ?>

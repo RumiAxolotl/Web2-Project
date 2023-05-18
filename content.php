@@ -15,39 +15,6 @@
                 include("./page/testform.php");
                 break;
             }
-            
-            case "sale":{
-                include("modules/page/sale.php");
-                break;
-            }
-            case "handbags":{
-                include("modules/page/handbags.php");
-                break;
-            }
-            case "accessories":{
-                include("modules/page/accessories.php");
-                break;
-            }
-            case "wallets":{
-                include("modules/page/wallets.php");
-                break;
-            }
-            case "menstore":{
-                include("modules/page/menstore.php");
-                break;
-            }
-            case "shoe":{
-                include("modules/page/shoe.php");
-                break;
-            }
-            case "vintage":{
-                include("modules/page/vintage.php");
-                break;
-            }
-            case "service":{
-                include("modules/page/service.php");
-                break;
-            }
             case "detail":{
                 include("./page/products_detail.php");
                 break;
@@ -82,6 +49,10 @@
                 include("./page/chonsp.php");
                 break;
             }
+            case "login":{
+                include("./page/login1.php");
+                break;
+            }
             case "xulidh":{
                 include("./page/xulidh.php");
                 break;
@@ -100,7 +71,11 @@
                 break;
             }
             case "dathang":{
-                include("./page/dathang.php");
+                include("./page/xulydh.php");
+                break;
+            }
+            case "themkh":{
+                include("./page/themkh.php");
                 break;
             }
             case "logout_user":{

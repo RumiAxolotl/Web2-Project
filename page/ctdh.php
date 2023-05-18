@@ -10,7 +10,7 @@
             <li class="group-left-item"><a href="index.php?action=info"><i class="fas fa-user"></i>Thông tin tài khoản</a></li>
             <li class="group-left-item"><a href="index.php?action=changepass"><i class="fas fa-key"></i>Đổi mật khẩu</a></li>
             <li class="group-left-item"><a href="index.php?action=listorder"><i class="fas fa-list"></i>Quản lí đơn hàng</a></li>
-            <li onclick="logout()" class="group-left-item"><a href="index.php"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>     
+            <li onclick="logout()" class="group-left-item"><a href="index.html"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>     
         </ul> 
         <ul class="group-right">
         <table width="1000px" class="tb_a2" >

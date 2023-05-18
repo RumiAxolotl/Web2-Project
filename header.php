@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery Shop </title>
+    <title>BAKERY Shop </title>
     <link rel="stylesheet" href="css/style31.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/styleA.css">
@@ -17,8 +17,8 @@
 
 <body>
 
-
-<!-- <script>
+<!--
+<script>
     function dropdownFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -55,6 +55,9 @@
             </ul>
         </div>
         <div class="row">
+            <div class="header_top logo">
+                <a href="index.php"><img src="images/logo.jpg" style="width:200px ; height:100px" alt="logo"></a>
+            </div>
             <div class="header_top title">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
@@ -66,7 +69,6 @@
             <div class="header_top search_1">
                 <ul>
                 <li class="header_top_1 fas"><a href="index.php?action=cart" class="btncart"><img src="images/cart.png" width="30px" height="30px"></a></li>
-                <img src="images/logo.png" class="menu-icon"  onclick="menutoggle()">
                 </ul>
         </div>
     </div>
