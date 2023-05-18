@@ -49,7 +49,7 @@
                         <li><a href="index.php?action=info"><?=$_SESSION['name_cus']?></a></li>
                         
                         <?php } else{ ?>
-                            <li><a href="index.php?action=account">Đăng nhập</a></li>
+                            <li><a href="index.php?action=account">Đăng nhập / Đăng ký</a></li>
                             
                 <?php } ?>
             </ul>
