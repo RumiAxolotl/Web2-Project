@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 07, 2023 lúc 06:02 PM
--- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.0.25
+-- Host: localhost
+-- Generation Time: May 18, 2023 at 04:53 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `cnc`
+-- Database: `web2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_account`
+-- Table structure for table `tbl_account`
 --
 
 CREATE TABLE `tbl_account` (
@@ -35,21 +35,17 @@ CREATE TABLE `tbl_account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_account`
+-- Dumping data for table `tbl_account`
 --
 
 INSERT INTO `tbl_account` (`username`, `password`, `status`, `authority`) VALUES
 ('admin', 'admin', 1, 1),
-('khuong', 'pham', 1, 1),
-('qwer', '122', 1, 0),
-('thanhgiang.user@gmail.com', '123123', 1, 0),
-('thanhgiangdz', '123123', 1, 0),
-('thanhgianguser@gmail.com', '123123', 1, 0);
+('rumi', 'rumi', 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_category`
+-- Table structure for table `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -58,19 +54,16 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_category`
+-- Dumping data for table `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`id_loai`, `ten_loai`) VALUES
-(1, 'ADIDAS'),
-(2, 'NIKE'),
-(3, 'PUMA'),
-(4, 'GUCCI');
+(1, 'socola');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_color`
+-- Table structure for table `tbl_color`
 --
 
 CREATE TABLE `tbl_color` (
@@ -79,20 +72,18 @@ CREATE TABLE `tbl_color` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_color`
+-- Dumping data for table `tbl_color`
 --
 
 INSERT INTO `tbl_color` (`id_color`, `name`) VALUES
 (1, 'Red'),
 (2, 'Yellow'),
-(3, 'Black'),
-(4, 'White'),
-(5, 'Blue');
+(3, 'Blue');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_cutomer`
+-- Table structure for table `tbl_cutomer`
 --
 
 CREATE TABLE `tbl_cutomer` (
@@ -104,17 +95,16 @@ CREATE TABLE `tbl_cutomer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_cutomer`
+-- Dumping data for table `tbl_cutomer`
 --
 
 INSERT INTO `tbl_cutomer` (`id_customer`, `name`, `address`, `phone`, `username`) VALUES
-(8, 'Giang', 'ĐHSG', '0342601307', 'thanhgiangdz'),
-(13, 'Nguyễn Thanh Giang', 'Đại học sài gòn', '0342601307', 'thanhgiang.user@gmail.com');
+(14, 'PHAM THANH THIEN', 'hochiminh', '0353184164', 'rumi');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_detail_order`
+-- Table structure for table `tbl_detail_order`
 --
 
 CREATE TABLE `tbl_detail_order` (
@@ -127,25 +117,10 @@ CREATE TABLE `tbl_detail_order` (
   `total_money` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
---
--- Đang đổ dữ liệu cho bảng `tbl_detail_order`
---
-
-INSERT INTO `tbl_detail_order` (`id_order`, `id_product`, `size`, `color`, `quantity`, `price`, `total_money`) VALUES
-(2, 2, 'S', 'Red', 36, 475000, 17100000),
-(3, 2, 'M', 'Red', 1, 475000, 475000),
-(4, 3, 'S', 'Red', 5, 375000, 1875000),
-(5, 3, '36', 'Red', 1, 375000, 375000),
-(6, 3, '36', 'Yellow', 1, 375000, 375000),
-(7, 3, '38', 'White', 1, 2100000, 2100000),
-(7, 4, '39', 'Yellow', 1, 2600000, 2600000),
-(8, 8, '40', 'Black', 1, 4900000, 4900000),
-(8, 10, '42', 'Yellow', 1, 4000000, 4000000);
-
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_order`
+-- Table structure for table `tbl_order`
 --
 
 CREATE TABLE `tbl_order` (
@@ -161,20 +136,10 @@ CREATE TABLE `tbl_order` (
   `total_money` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
---
--- Đang đổ dữ liệu cho bảng `tbl_order`
---
-
-INSERT INTO `tbl_order` (`id_order`, `id_customer`, `ten_kh`, `id_staff`, `ngay_dat`, `address`, `phone`, `status`, `notes`, `total_money`) VALUES
-(5, 7, 'Nguyễn Thanh Giang', 0, '0000-00-00', 'Đại Học Sài Gòn', '0342601307', 1, 'NULL', 375000),
-(6, 8, 'Giang', 0, '0000-00-00', 'ĐHSG', '0342601307', 0, 'NULL', 375000),
-(7, 13, 'Nguyễn Thanh Giang', 0, '0000-00-00', 'Đại học sài gòn', '0342601307', 0, 'NULL', 4700000),
-(8, 13, 'Nguyễn Thanh Giang', 0, '0000-00-00', 'Đại học sài gòn', '0342601307', 0, 'NULL', 8900000);
-
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_products`
+-- Table structure for table `tbl_products`
 --
 
 CREATE TABLE `tbl_products` (
@@ -191,35 +156,16 @@ CREATE TABLE `tbl_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_products`
+-- Dumping data for table `tbl_products`
 --
 
 INSERT INTO `tbl_products` (`id_product`, `name`, `price`, `details`, `status`, `image`, `image2`, `image3`, `image4`, `id_loai`) VALUES
-(1, 'Adidas Alpha BOUNCE', 3900000, 'Có thể nói, adidas AlphaBOUNCE là một trong những đôi giày mới bắt mắt nhất trong phân khúc giày chạy bộ, thiết kế độc đáo hỗ trợ mọi chuyển động khó trong thể thao, mỗi bước đi đều có đệm Bounce mềm mại và dẻo dai. Alpha Bounce sẽ giúp bạn đi đường dài cực kỳ êm ái và thoải mái. Phần trên thông qua các nếp gấp mang tính biểu tượng của AP để vừa vặn với bàn chân của bạn và vừa vặn một cách thoải mái, cho phép bàn chân của bạn di chuyển trong trạng thái “thực”. Đây cũng là một đặc điểm nổi bật, vừa mang tính thời trang, vừa góp phần tạo nên hiệu quả vượt trội cho loại giày này. Đế được làm bằng cao su mềm với họa tiết nút tròn giúp hỗ trợ lực đè lên bàn chân.', 1, 'adidas1.png', 'adidas1-2.jpg', 'adidas1-3.jpg', 'adidas1-4.jpg', 1),
-(2, 'Adidas EQT Boost', 2600000, 'Nếu bạn vẫn đang “loanh quanh” với hàng tá nhãn hiệu giày mà chưa biết mua gì. Tôi sẽ cho bạn biết, nếu bạn muốn mua giày mới ngay bây giờ, tại sao không bỏ qua adidas EQT. Dòng giày lâu đời tích hợp công nghệ hiện đại của Adidas, chẳng hạn như đế Torsion, cho phép bàn chân trước và bàn chân sau của người mang EQT hoạt động riêng biệt. Phần hỗ trợ giữa bàn chân và sọc “ba” là dấu hiệu duy nhất cho phép cả hai thực tế và thiết thực, thời trang. Một Mau giày mang tính thể thao và chất lượng cao mà bạn không bao giờ nên bỏ qua trong năm nay.', 1, 'adidas2.png', 'adidas2-2.jpg', 'adidas2-3.jpg', 'adidas2-4.jpg', 1),
-(3, 'Adidas EQT Gazelle', 2100000, 'Giày Adidas EQT Gazelle là giày Swift, qua nhiều thập kỷ, nhiều thiết kế giày chạy bộ mang tính biểu tượng của Adidas đã đạt đến đỉnh cao. Giày đan siêu nhẹ này được thiết kế đặc biệt để sử dụng hàng ngày, có kiểu dáng thời trang và mang lại cảm giác nâng đỡ và linh hoạt. Giày thể thao Adidas EQT luôn là sự lựa chọn hàng đầu bởi vẻ đẹp tràn đầy sức sống, trẻ trung, tiện dụng, dễ phối với nhiều loại trang phục, phù hợp với nhiều dịp khác nhau.', 1, 'adidas3.png', 'adidas3-2.jpg', 'adidas3-3.jpg', 'adidas3-4.jpg', 1),
-(4, 'Adidas NMD', 2600000, 'Được ra mắt vào tháng 12 năm 2015, nhưng nó vẫn là một đôi giày được săn đón và tiếp tục mở rộng tầm ảnh hưởng của mình trong giới yêu giày sneaker và ngành công nghiệp thời trang. Adidas NMD (Nomad) áp dụng thiết kế tối giản, đế và vải Primeknit, sẵn sàng chinh phục tất cả mọi người với phong cách đường phố. Càng hot và càng được yêu thích hơn khi nhiều phối màu thú vị cùng chất lượng siêu độc đáo được giới thiệu.', 1, 'adidas4.png', 'adidas4-2.jpg', 'adidas4-3.jpg', 'adidas4-4.jpg', 1),
-(5, 'Adidas super star', 2500000, 'Với Adidas SuperStar, Adidas muốn khẳng định rằng đẳng cấp luôn trường tồn cùng thời gian. Hằng năm Mau giày này luôn cho ra mắt một phiên bản mới, thu hút được sự quan tâm của nhiều bạn trẻ.Thêm một điểm cộng to oành của bé này chính là khả năng ăn rơ tuyệt vời với bất cứ trang phục nào. Điều khiến những đôi giày adidas superstar đặc biệt chính là phần mũi vỏ sò (shelltoe).  Phần thân giày có ba sọc cổ điển của adidas, và thường được làm bằng chất liệu da.', 1, 'adidas5.png', 'adidas5-2.jpg', 'adidas5-3.jpg', 'adidas5-4.jpg', 1),
-(6, 'Nike Zoom Pegasus', 3500000, 'Lấy cảm hứng từ những chú ngựa thần trong văn hóa Hy Lạp, Nike Zoom Pegasus được ra đời với mong muốn đưa đến cho mọi người sản phẩm giày chạy tốt nhất với giá cả phải chăng. Đây cũng là một trong những Mau giày Nike nam chạy bộ có tuổi đời cao nhất thế giới, khoảng gần 30 năm. Nike Zoom Pegasus được đánh giá là một trong những Mau giày chạy hoàn hảo nhất hiện nay. Phần thân giày được dệt từ vải lưới giúp thoáng khí và thoát mồ hôi rất tốt. Đế giày có sử dụng công nghệ Air để tạo độ êm chân tối đa cho người sử dụng, đặc biệt là khi chạy bộ.', 1, 'nike1.png', 'nike1-2.jpg', 'nike1-3.jpg', 'nike1-4.jpg', 2),
-(7, 'Nike Zoom Shift', 2500000, 'Nike Zoom Shift được cho ra đời để phục vụ môn bóng rổ. Tuy vậy, trong những năm trở lại đây, đôi giày này đã trở nên rất hot và cháy hàng khắp mọi nơi. Với nhiều cải tiến và nhiều phiên bản khác nhau, được kết hợp cùng các cầu thủ bóng rổ, thật không khó để hiểu tại sau Mau giày Nike nam này lại thu hút đến vậy.', 1, 'nike2.png', 'nike2-2.jpg', 'nike2-3.jpg', 'nike2-4.jpg', 2),
-(8, 'Nike Dunk High LX', 4900000, 'Mau giày huyền thoại này được đặt tên dựa theo siêu sao bóng rổ Michael Jordan. Mặc dù ngày nay đã có nhiều Mau giày bóng rổ hiện đại hơn, êm chân hơn của Nike và các hãng giày khác, nhưng Nike Air Jordan vẫn là một tượng đài lớn, trở thành một item must – have trong tủ đồ của giới mộ điệu. Đôi giày này đã vượt qua khuôn khổ của đồ thể thao, trở thành một biểu tượng văn hóa của môn bóng rổ nói riêng và văn hóa nước Mỹ nói chung.', 1, 'nike3.png', 'nike3-2.jpg', 'nike3-3.jpg', 'nike3-4.jpg', 2),
-(9, 'Nike Air Force 1 \'07 PRM', 4200000, 'Đây cũng là một trong những thiết kế đi cùng năm tháng của Nike. Ban đầu, vào năm 1982 Mau giày Nike nam này được rất nhiều cầu thủ bóng rổ nhà nghề Mỹ NBA diện trong các trận thi đấu, sau đó nó trở nên nổi tiếng trên toàn thế giới. Nike Air Force 1 cũng là một trong những thiết kế giày được ảnh hưởng nhiều nhất của Nike với hàng chục phiên bản khác nhau, mỗi phiên bản lại thể hiện một câu chuyện riêng.', 1, 'nike4.png', 'nike4-2.jpg', 'nike4-3.jpg', 'nike4-4.jpg', 2),
-(10, 'Jordan Series .03 \'Dear \'90s\'', 4000000, 'Giày Nike Air Jordan Low 1 có thiết kế thông minh với các rãnh sâu làm tăng lực ma sát và hạn chế trơn trượt. Phần lót trong chế tạo từ chất liệu da cao cấp mang lại cảm giác tự nhiên và êm ái. Bên cạnh đó, cấu tạo đế không khí giúp người dùng thoải mái dù mang giày trong suốt ngày dài. Giày nữ Air Nike Jordan Low được thiết kế theo phong cách skating. Chính vì vậy, màu sắc của Mau giày này vô cùng độc đáo và bắt mắt. Bạn có thể kết hợp giày với nhiều phong cách thời trang khác nhau. Từ đó sáng tạo ra những outfit thật thời thượng và cá tính.', 1, 'nike5.png', 'nike5-2.jpg', 'nike5-3.jpg', 'nike5-4.jpg', 2),
-(11, 'Puma Ember Trail', 2200000, 'Là một phần của xu hướng sneaker năm 2020, Puma Ember Trail là một trong những sản phẩm chunky phổ biến của gia đình Puma. Đôi giày được thiết kế với thiết kế chắc chắn và khả năng tạo ra màu sắc nổi bật. Phần trên được làm bằng vải dệt kết hợp với lớp lưới mang lại cảm giác mịn màng tối đa. Lớp lót Misole EVA kết hợp công nghệ hỗ trợ gót chân Formstrip để bảo vệ bàn chân. Đế giày được làm bằng cao su với các rãnh chống trượt để tăng tính linh hoạt khi di chuyển.', 1, 'puma1.png', 'puma1-2.jpg', 'puma1-3.jpg', 'puma1-4.jpg', 3),
-(12, 'Puma Cell Alien OG', 4000000, 'Ứng dụng công nghệ PUMA CELL xuất hiện lần đầu tiên vào năm 1998 kết hợp với thiết kế cá tính và màu sắc tươi mới và đệm nhẹ cho thoải mái, giày Puma Cell Alien OG là một trong những đôi giày sneaker sành điệu mới nhất được nhiều tín đồ thời trang của thương hiệu Puma yêu thích. Giày có thiết kế đường phố cổ điển của thập niên 90 với phần trên được làm bằng vải dệt cao cấp mềm mại kết hợp với đệm Misole Eva siêu nhẹ cho cảm giác thoải mái. Lớp lót tiên tiến với công nghệ hỗ trợ và cố định gót chân giúp bảo vệ đôi chân của bạn. Đế được làm bằng cao su chất lượng cao với hoa văn đặc biệt để tạo độ bền và nổi bật cho đôi giày.', 1, 'puma2.png', 'puma2-2.jpg', 'puma2-3.jpg', 'puma2-4.jpg', 3),
-(13, 'PUMA x TYAKASHA RS-X', 4200000, 'Sở hữu thiết kế siêu thời trang và hiện đại với thiết kế hợp lý, giày PUMA x TYAKASHA RS-X là đôi giày Puma mới nhất đặc biệt phổ biến trong giới sneaker. Đôi giày sở hữu thiết kế street style cổ điển kết hợp với phô mai thể thao phóng đại để tạo điểm nhấn độc đáo. Phần trên được làm bằng da lộn cao cấp để tạo cảm giác chân mềm mại. Đệm siêu nhẹ Misole PU kết hợp với đế cao su chống trượt giúp bảo vệ chân và tăng khả năng vận động khi di chuyển. Sở hữu kiểu dáng cổ điển thập niên 80 với thiết kế độc đáo với các miếng TPU được sắp xếp nổi bật, PUMA x TYAKASHA RS-X chắc chắn sẽ là một lựa chọn tuyệt vời cho phong cách thời trang nổi bật của bạn.', 1, 'puma3.png', 'puma3-2.jpg', 'puma3-3.jpg', 'puma3-4.jpg', 3),
-(14, 'Puma RS-X Trophy', 2500000, 'Puma RS-X Trophy là một đôi sneaker chunky với hình dáng siêu gọn gàng khiến nó trở thành một trong những Mau sneaker tiếp theo được yêu thích bởi tín đồ thời trang. Sở hữu thiết kế theo phong cách cổ điển với phần trên được làm từ vải dệt cao cấp kết hợp với đệm Misole Eva siêu nhẹ tạo cảm giác vô cùng thoải mái. Lớp lót xốp chống sốc với công nghệ cố định gót chân và đế cao su chống trượt cho chuyển động linh hoạt bảo vệ đôi chân của bạn. Puma RS-X Trophy chắc chắn sẽ tạo ra một trải nghiệm tuyệt vời trong phong cách thời trang của bạn.', 1, 'puma4.png', 'puma4-2.jpg', 'puma4-3.jpg', 'puma4-4.jpg', 3),
-(15, 'Puma Suede', 2000000, 'Nhắc tới Puma ta không thể nào không nhớ tới cái tên kinh điển Puma Suede. Với hướng đi ban đầu là một đôi giày thể thao dành cho bộ môn bóng rổ, nhưng Puma lại muốn có một điều gì đó đột phá và sáng tạo, hơn nữa là sự chú ý từ các khán giả và vận động viên. Thế là ý tưởng về một đôi giày da lộn huyền thoại, hợp thời trang được ra đời.', 1, 'puma5.png', 'puma5-2.jpg', 'puma5-3.jpg', 'puma5-4.jpg', 3),
-(16, 'Gucci Disney Rhyton', 2400000, 'Disney Rhyton là một item sáng giá có tên trong danh sách bộ sưu tập giày cho những ai là fans Disney. Với thiết kế form giày “kệch cỡm” và “to xác” trông rất hầm hố nhưng lại có chút đáng yêu khi được trang trí bằng hình ảnh em chuột Mickey. Dù là đi chơi, đi học hay đi làm thì em này hoàn toàn phù hợp với những outfit trên. Ngoài ra, với những ai thuộc team “nấm lùn” thì nên cân nhắc em này nhé bởi phần đế được nâng lên đến 5cm giúp bạn ăn gian, cải thiện được chiều cao của mình. Cùng chung một lò sản xuất với những dòng giày trước đây, nên em này cũng được sở hữu chất liệu cao cấp, mang lại cho người dùng cảm giác thoải mái, êm ái khi sử dụng.', 1, 'gucci1.png', 'gucci1-2.jpg', 'gucci1-3.jpg', 'gucci1-4.jpg', 4),
-(17, 'Gucci Ace Leather', 6600000, 'Gucci Men’s Ace Leather mang trong mình thiết kế đậm nét hiện đại có thể mix and match được với nhiều set đồ khác nhau. Với hai tone màu trắng, đen chủ đạo quen thuộc em này trở thành item sáng giá được các tín đồ sneaker điên cuồng săn lùng. Dòng sản phẩm giày Gucci Men’s Ace Leather được làm bằng chất liệu da cao cấp có độ bền cao, giúp mang lại cảm giác thoải mái êm ái cho đôi chân trong quá trình di chuyển.', 1, 'gucci2.png', 'gucci2-2.jpg', 'gucci2-3.jpg', 'gucci2-4.jpg', 4),
-(18, 'Gucci ace Signature', 5500000, 'Một dòng sản phẩm được tung ra thị trường, nhằm mở rộng và phát triển và khẳng định chủ quyền thương hiệu không ai khác chính là Mau giày Ace Gucci Signature Sneaker. Đây là Mau giày được làm bằng chất liệu da cao cấp, được in nổi hoa văn logo GG trên nền da đen. Với phần đế được làm bằng chất liệu cao su sản xuất tại Italia.', 1, 'gucci3.png', 'gucci3-2.jpg', 'gucci3-3.jpg', 'gucci3-4.jpg', 4),
-(19, 'Gucci stripe leather', 2600000, 'Giày Gucci Slip On Sneaker With Bees nổi bật với những con ong và ngôi sao độc đáo của nhà thiết kế Alessandro Michele, được may tinh xảo trên chất liệu da đen thời thượng, màu vàng – đen thời thượng. Với kiểu dáng mỏng, trơn phù hợp với mọi người bởi sự tiện lợi, nhỏ gọn, thể hiện cá tính của chủ nhân, đây là Mau giày không thể thiếu cho các tín đồ thời trang nam.', 1, 'gucci4.png', 'gucci4-2.jpg', 'gucci4-3.jpg', 'gucci4-4.jpg', 4),
-(21, 'Adidas NMD', 3600000, 'Nói đơn giản thế thôi bạn đã đủ biết sức hút mạnh mẽ của nó rồi đúng không? Mang âm hưởng khám phá và trải nghiệm cuộc sống. Adidas NMD chính là đứa con hoàn hảo nhất dành cho những cô nàng đam mê sự mới lạ. Giày thể thao adidas NMD được ra đời dựa trên cảm hứng từ nguồn cội Adidas Originals. NMD ra đời đại diện cho  một thế hệ mới, thế hệ của sự trẻ trung năng động.', 1, 'adidas6.jpg', 'adidas6-2.jpg', 'adidas6-3.jpg', 'adidas6-4.jpg', 1);
+(1, 'Bï¿½nh kem socola', 300000, 'Bï¿½nh kem socola v?i nhï¿½n bï¿½nh bï¿½ng lan socola cï¿½ng l?p kem ph? nhi?u mï¿½u s?c cï¿½ th? l?a ch?n', 1, 'banhsocola.jpeg', '', '', '', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_product_size_color`
+-- Table structure for table `tbl_product_size_color`
 --
 
 CREATE TABLE `tbl_product_size_color` (
@@ -230,59 +176,11 @@ CREATE TABLE `tbl_product_size_color` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_product_size_color`
+-- Dumping data for table `tbl_product_size_color`
 --
 
 INSERT INTO `tbl_product_size_color` (`id_product`, `id_size`, `id_color`, `quantity`) VALUES
-(1, 1, 1, 19),
-(1, 2, 1, 20),
-(1, 3, 1, 31),
-(1, 4, 1, 31),
-(1, 5, 1, 31),
-(1, 8, 1, 31),
-(1, 10, 1, 31),
 (1, 1, 2, 20),
-(1, 2, 2, 20),
-(1, 3, 2, 31),
-(1, 4, 2, 31),
-(1, 5, 2, 31),
-(1, 8, 2, 31),
-(1, 10, 2, 31),
-(1, 3, 3, 31),
-(1, 5, 3, 31),
-(1, 8, 3, 31),
-(1, 10, 3, 31),
-(2, 1, 1, -16),
-(2, 2, 1, 19),
-(2, 5, 1, 13),
-(2, 6, 1, 12),
-(2, 7, 1, 14),
-(2, 8, 1, 13),
-(2, 9, 1, 9),
-(2, 10, 1, 13),
-(2, 1, 2, 20),
-(2, 2, 2, 20),
-(2, 5, 2, 23),
-(2, 6, 2, 24),
-(2, 7, 2, 15),
-(2, 8, 2, 12),
-(2, 9, 2, 13),
-(2, 5, 3, 41),
-(2, 6, 3, 13),
-(2, 7, 3, 16),
-(2, 8, 3, 11),
-(2, 9, 3, 13),
-(2, 5, 4, 13),
-(2, 7, 4, 17),
-(2, 9, 4, 13),
-(3, 1, 1, 15),
-(3, 2, 1, 19),
-(3, 3, 1, 23),
-(3, 4, 1, 17),
-(3, 5, 1, 6),
-(3, 6, 1, 21),
-(3, 7, 1, 31),
-(3, 8, 1, 17),
 (3, 9, 1, 11),
 (3, 1, 2, 20),
 (3, 2, 2, 19),
@@ -777,7 +675,7 @@ INSERT INTO `tbl_product_size_color` (`id_product`, `id_size`, `id_color`, `quan
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_size`
+-- Table structure for table `tbl_size`
 --
 
 CREATE TABLE `tbl_size` (
@@ -786,25 +684,16 @@ CREATE TABLE `tbl_size` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_size`
+-- Dumping data for table `tbl_size`
 --
 
 INSERT INTO `tbl_size` (`id_size`, `name`) VALUES
-(1, '35'),
-(2, '36'),
-(3, '37'),
-(4, '38'),
-(5, '39'),
-(6, '40'),
-(7, '41'),
-(8, '42'),
-(9, '43'),
-(10, '44');
+(1, 'S');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_staff`
+-- Table structure for table `tbl_staff`
 --
 
 CREATE TABLE `tbl_staff` (
@@ -816,119 +705,118 @@ CREATE TABLE `tbl_staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_staff`
+-- Dumping data for table `tbl_staff`
 --
 
 INSERT INTO `tbl_staff` (`id_staff`, `name`, `address`, `phone`, `username`) VALUES
-(1, 'Phạm Duy Khương', 'Hà Nội', '0356657937', 'khuong'),
-(2, 'admin', 'Đại học sài gòn', '0123456789', 'admin');
+(1, 'admin', 'Đại học sài gòn', '0123456789', 'admin');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `tbl_account`
+-- Indexes for table `tbl_account`
 --
 ALTER TABLE `tbl_account`
   ADD PRIMARY KEY (`username`);
 
 --
--- Chỉ mục cho bảng `tbl_category`
+-- Indexes for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`id_loai`);
 
 --
--- Chỉ mục cho bảng `tbl_color`
+-- Indexes for table `tbl_color`
 --
 ALTER TABLE `tbl_color`
   ADD PRIMARY KEY (`id_color`);
 
 --
--- Chỉ mục cho bảng `tbl_cutomer`
+-- Indexes for table `tbl_cutomer`
 --
 ALTER TABLE `tbl_cutomer`
   ADD PRIMARY KEY (`id_customer`);
 
 --
--- Chỉ mục cho bảng `tbl_detail_order`
+-- Indexes for table `tbl_detail_order`
 --
 ALTER TABLE `tbl_detail_order`
   ADD PRIMARY KEY (`id_product`,`id_order`,`size`,`color`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `tbl_order`
+-- Indexes for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`id_order`);
 
 --
--- Chỉ mục cho bảng `tbl_products`
+-- Indexes for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
   ADD PRIMARY KEY (`id_product`);
 
 --
--- Chỉ mục cho bảng `tbl_product_size_color`
+-- Indexes for table `tbl_product_size_color`
 --
 ALTER TABLE `tbl_product_size_color`
   ADD PRIMARY KEY (`id_product`,`id_color`,`id_size`) USING BTREE;
 
 --
--- Chỉ mục cho bảng `tbl_size`
+-- Indexes for table `tbl_size`
 --
 ALTER TABLE `tbl_size`
   ADD PRIMARY KEY (`id_size`);
 
 --
--- Chỉ mục cho bảng `tbl_staff`
+-- Indexes for table `tbl_staff`
 --
 ALTER TABLE `tbl_staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `tbl_category`
+-- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
   MODIFY `id_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_color`
+-- AUTO_INCREMENT for table `tbl_color`
 --
 ALTER TABLE `tbl_color`
   MODIFY `id_color` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_cutomer`
+-- AUTO_INCREMENT for table `tbl_cutomer`
 --
 ALTER TABLE `tbl_cutomer`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_order`
+-- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_products`
+-- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
   MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_size`
+-- AUTO_INCREMENT for table `tbl_size`
 --
 ALTER TABLE `tbl_size`
   MODIFY `id_size` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_staff`
+-- AUTO_INCREMENT for table `tbl_staff`
 --
 ALTER TABLE `tbl_staff`
   MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
