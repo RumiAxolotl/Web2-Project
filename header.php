@@ -52,21 +52,13 @@
                             <li><a href="index.php?action=account">Đăng nhập</a></li>
                             
                 <?php } ?>
-                <li><i class="fab fa-facebook-f"></i></a></li>
-                <li><i class="fab fa-instagram"></i></a></li>
-                <li><i class="fab fa-twitter"></i></a></li>
-                <li><i class="fab fa-pinterest-p"></i></a></li>
             </ul>
         </div>
         <div class="row">
-            <div class="header_top logo">
-                <a href="index.php"><img src="images/logoT.png" style="width:200px ; height:100px" alt="logo"></a>
-            </div>
             <div class="header_top title">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
                     <li><a href="index.php?action=productclassification">Sản Phẩm</a></li>
-                    <li><a href="index.php?action=">Bảo Hành</a></li>
                     <li><a href="index.php?action=contact">Liên Hệ</a></li>
                     
                     <li><a href="index.php?action=">Giới Thiệu </a></li>
@@ -75,10 +67,8 @@
                 
             <div class="header_top search_1">
                 <ul>
-                <li class="header_top_1 fas"><a href="index.php?action="><i class="far fa-heart" style="font-size:25px; color:black;"></i></a></li>
                 <li class="header_top_1 fas"><a href="index.php?action=cart" class="btncart"><img src="images/cart.png" width="30px" height="30px"></a></li>
-                <img src="images/menu.png" class="menu-icon" 
-                onclick="menutoggle()">
+                <img src="images/logo.png" class="menu-icon"  onclick="menutoggle()">
                 </ul>
         </div>
     </div>
