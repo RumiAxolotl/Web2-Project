@@ -10,7 +10,7 @@
                     <a href="index.php?action=productclassification" class="btn">Khám phá ngay &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <img src="images/logo.png">
+                    <img src="images/banner.jpg">
                 </div>
             </div>
             </div>
