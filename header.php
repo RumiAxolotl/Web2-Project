@@ -60,8 +60,6 @@
                     <li><a href="index.php">Trang Chủ</a></li>
                     <li><a href="index.php?action=productclassification">Sản Phẩm</a></li>
                     <li><a href="index.php?action=contact">Liên Hệ</a></li>
-                    
-                    <li><a href="index.php?action=">Giới Thiệu </a></li>
                 </ul>
             </div>
                 
