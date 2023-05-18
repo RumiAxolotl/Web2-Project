@@ -1,0 +1,77 @@
+
+ul{
+    list-style-type: none !important;
+}
+
+
+.listorder-container
+{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.listorder-container .group-left
+{
+    float: left;
+    width: 20%;
+}
+
+.listorder-container .group-left .group-left-item
+{
+    margin: 20px 0;
+}
+
+.listorder-container .divider
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.listorder-container .group-left .group-left-item a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+.listorder-container .group-left .group-left-item a:hover
+{
+    color: blue;
+}
+
+.listorder-container .group-right
+{
+    width: 50%;
+    text-align: left;
+}
+
+.listorder-container .group-right .group-right-item
+{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.listorder-container .divider-1
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.listorder-container .group-right-item input
+{
+    width: 80%;
+    height: 30px;
+}
+
+.listorder-container .group-right-item button
+{
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+    background:cornflowerblue;
+}
+
+.listorder-container .group-left .group-left-item  a
+{
+    font-size: 20px;
+}

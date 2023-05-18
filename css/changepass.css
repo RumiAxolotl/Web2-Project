@@ -1,0 +1,77 @@
+
+ul{
+    list-style-type: none !important;
+}
+
+
+.changle-container
+{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.changle-container .group-left
+{
+    float: left;
+    width: 20%;
+}
+
+.changle-container .group-left .group-left-item
+{
+    margin: 20px 0;
+}
+
+.changle-container .divider
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.changle-container .group-left .group-left-item a
+{
+    text-decoration: none;
+    color: #333;
+}
+
+.changle-container .group-left .group-left-item a:hover
+{
+    color: blue;
+}
+
+.changle-container .group-right
+{
+    width: 50%;
+    text-align: left;
+}
+
+.changle-container .group-right .group-right-item
+{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.changle-container .divider-1
+{
+    border-bottom: 3px solid #333;
+    width: 20%;
+}
+
+.changle-container .group-right-item input
+{
+    width: 80%;
+    height: 30px;
+}
+
+.changle-container .group-right-item button
+{
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+    background:cornflowerblue;
+}
+
+.changle-container .group-left .group-left-item  a
+{
+    font-size: 20px;
+}
