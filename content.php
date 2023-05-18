@@ -57,10 +57,6 @@
                 include("./page/account.php");
                 break;
             }
-            case "dangki":{
-                include("./page/account.php");
-                break;
-            }
             case "xulydn":{
                 include("./page/xulydn.php");
                 break;
@@ -86,10 +82,6 @@
                 include("./page/chonsp.php");
                 break;
             }
-            case "login":{
-                include("./page/login1.php");
-                break;
-            }
             case "xulidh":{
                 include("./page/xulidh.php");
                 break;
@@ -109,10 +101,6 @@
             }
             case "dathang":{
                 include("./page/dathang.php");
-                break;
-            }
-            case "themkh":{
-                include("./page/themkh.php");
                 break;
             }
             case "logout_user":{
