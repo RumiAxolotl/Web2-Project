@@ -44,7 +44,7 @@
             }
                 ?>
                  
-                 <?php
+                 <?php`
                 
             return $data;
         }
