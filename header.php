@@ -17,8 +17,8 @@
 
 <body>
 
-<!--
-<script>
+
+<!-- <script>
     function dropdownFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
     }
