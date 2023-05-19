@@ -5,7 +5,7 @@
 <section class="contact">
               <div class="content">
                 <h2>Liên hệ với chúng tôi</h2>
-                <p>Bakery SHOP mong muốn đưa đến tay khách hàng những sản phẩm tốt nhất, nếu có những góp ý, xin quý khách hãy để lại lời nhắn, BUBU shop sẽ kiểm tra và khắc phục lỗi</p>  
+                <p>Bakery SHOP mong muốn đưa đến tay khách hàng những sản phẩm tốt nhất, nếu có những góp ý, xin quý khách hãy để lại lời nhắn, Bakery shop sẽ kiểm tra và khắc phục lỗi</p>  
               </div>
               <div class="container">
                   <div class="contactInfo">
