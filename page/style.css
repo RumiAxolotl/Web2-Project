@@ -556,6 +556,9 @@ input[type="submit"].btnsearch:active{
 .productColor{
     text-align: center;
 }
+.productQuantity{
+    text-align: center;
+}
 
 /* --------------- Buy Button -------------- */
 

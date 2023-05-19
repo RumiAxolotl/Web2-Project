@@ -130,13 +130,13 @@ if(isset($_POST['idsp']) && !empty($_POST['idsp'])){
         $_SESSION['tonghoadon'][0]+=$sl*$row['price'];
     }
 }
-   
-    header("Location: index.php?action=cart");
+    
+    header("Location: index.php?action=cart2");
 }
     }else{
         ?>
         <script>
-        alert("San Pham da het hang");
+        alert("Đã hết hàng");
         window.location.href="index.php?id=<?=$idsp?>&action=detail";
 
         </script>

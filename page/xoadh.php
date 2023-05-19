@@ -34,16 +34,16 @@ if(isset($_GET['check'])){
         $sql6="DELETE FROM tbl_detail_order WHERE id_order='$id_order'";
         $result6=$connect->query($sql6);
         if($result5 && $result6){
-            echo "Huy thanh cong";
+            echo "Hủy thành công";
         }
     }
     else{
-        echo "Huy that bai";
+        echo "Hủy thất bại";
     }
 }
 else{
     if($_GET['status']==1){
-        echo "Don hang da duoc xu ly!!!";
+        echo "Đơn hàng đã được xử lí !!!";
         exit;
     }
 }

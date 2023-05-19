@@ -17,7 +17,7 @@
     ?> 
         <div class="row row1"> </div>
         <?php if(ceil($total_row/8)>1){ ?>
-        <h3 style="color:red";>Có <?=$total_row?> san pham tren <?=ceil($total_row/8);?> trang</h3>
+        <h3 style="color:red";>Có <?=$total_row?> sản phẩm trên <?=ceil($total_row/8);?> trang</h3>
         <?php } ?>
         <div class="page-btn">
         <?php for($i=1;$i<=ceil($total_row/8);$i++){ ?>

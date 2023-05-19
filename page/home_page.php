@@ -20,10 +20,10 @@
   <div class="small-container">
     <div class="row">
       <div class="col-3">
-        <img style="width: 309px;height: 339px" src="images/category1.jpeg">
+        <img style="width: 309px;height: 339px" src="./images/chocolatecake.jpeg">
       </div>
       <div class="col-3">
-        <img style="width: 309px;height: 339px" src="images/category2.jpeg">
+        <img style="width: 309px;height: 339px" src="./images/whitechocolatecake.jpg">
       </div>
     </div>
   </div>

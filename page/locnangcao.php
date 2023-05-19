@@ -1,5 +1,5 @@
 <?php
-$connect=mysqli_connect("localhost","root","","cnc");
+    include("../admin/connect.php");
 
 $data="";
 if(isset($_GET['theloai']) && isset($_GET['to']) && isset($_GET['from'])){

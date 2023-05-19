@@ -19,8 +19,8 @@
         <td width="250px" ><b>Ngày lập</b></td>
         <td width="200px" ><b>Tổng Tiền</b></td>
         <td width="200px" ><b>CTDH</b></td>
-        <td width="200px" ><b>Tinh Trang don hang</b></td>
-        <td width="200px" ><b>Xoa</b></td>
+        <td width="200px" ><b>Tình trạng đơn hàng</b></td>
+        <td width="200px" ><b>Hủy đơn</b></td>
     </tr>
      <?php
          include("./admin/connect.php"); 
@@ -32,15 +32,15 @@
      <tr  >
              <td><?=$dem++?></td>
             <td><?=$row['id_order']?></td>
-            <td><?= date('d/m/Y H:i')?></td>
+            <td><?= date('d/m/Y ')?></td>
            <td><?=$row['total_money']?></td>
            <td><a href="index.php?action=ctdh&mahd=<?=$row['id_order']?>">CTDH</a></td>
            <?php if($row['status']==0){ ?>
-           <td>Chua xu ly</td>
+           <td>Chưa xử lí</td>
            <?php } else{ ?>
-            <td>da xu ly</td>
+            <td>Đã xử lí</td>
             <?php } ?>
-            <td><button onclick="xoa(<?=$row['id_order']?>,<?=$row['status']?>)" id="xoa">huy</button></td>
+            <td><button onclick="xoa(<?=$row['id_order']?>,<?=$row['status']?>)" id="xoa">HỦY</button></td>
             
     </tr>   
         <?php  } ?>     
@@ -50,7 +50,7 @@
 
     function xoa(id,status){
         if(status==0){
-        var check=confirm("Ban co muon huy hay khong");
+        var check=confirm("Bạn có muốn hủy không");
         $.ajax({
             type:"get",
             url:"./page/xoadh.php",

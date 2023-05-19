@@ -19,35 +19,20 @@
                 <div class = "product-imgs" style="flex-direction: column; justify-content: center;">
                     <div class = "img-display" style="overflow: hidden; ">
                         <div class = "img-showcase" style="display: flex; width: 100%">
-                            <img id="show-case-1" src = "./admin/images/<?=$row['image']?>" alt = "cake image" style="min-width: 100%">
-                            <img id="show-case-2" src = "./admin/images/<?=$row['image2']?>" alt = "cake image" style="min-width: 100%">
-                            <img id="show-case-3" src = "./admin/images/<?=$row['image3']?>" alt = "cake image" style="min-width: 100%">
-                            <img id="show-case-4" src = "./admin/images/<?=$row['image4']?>" alt = "cake image" style="min-width: 100%">
+                            <img id="show-case-1" src = "./admin/images/<?=$row['image']?>" alt = "shoe image" style="min-width: 100%">
+                            <img id="show-case-2" src = "./admin/images/<?=$row['image2']?>" alt = "shoe image" style="min-width: 100%">
+                            <img id="show-case-3" src = "./admin/images/<?=$row['image3']?>" alt = "shoe image" style="min-width: 100%">
+                            <img id="show-case-4" src = "./admin/images/<?=$row['image4']?>" alt = "shoe image" style="min-width: 100%">
                         </div>
                     </div>
                     <div class = "img-select" style="display: flex">
-                    <div class = "img-item" style="margin: 0.1rem; margin-right: 0;">
-                    <a href = "#" data-id = "2" >
-                            <img id="img-item-2" src = "./admin/images/<?=$row['image2']?>" alt = "cake image">
-                        </a>
-                    </div>
-                    <div class = "img-item" style="margin: 0.1rem;margin-right: 0;">
-                    <a href = "#" data-id = "3">
-                <img id="img-item-3" src = "./admin/images/<?=$row['image3']?>" alt = "cake image">
-                </a>
-            </div>
-            <div class = "img-item">
-              <a href = "#" data-id = "4" style="margin: 0.1rem;">
-                <img id="img-item-4" src = "./admin/images/<?=$row['image4']?>" alt = "cake image">
-              </a>
-            </div>
+                    
           </div>
         </div>
 
             </div>
     
             <div class="col-2">
-                <p>Trang chủ / Bánh kem</p>
                 <h1><?=$row['name']?></h1>
                 <h4><?=number_format($row['price'],0,",",".")?> VNĐ</h4> 
                 <form action="index.php?action=xulidh" method="post">
