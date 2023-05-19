@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-2">
-                    <img src="images/matchacake.jpg" width="100%">
+                    <img src="./images/dangnhap.jpg" width="100%">
                 </div>
 
                 <div class="col-2">

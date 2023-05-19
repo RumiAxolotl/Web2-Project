@@ -6,10 +6,8 @@
 
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
-  </li>
-  <li class="breadcrumb-item active">Quản lý don hang</li>
+
+  <li class="breadcrumb-item active">Quản lý đơn hàng</li>
 </ol>
 
 <!-- Area Chart Example-->

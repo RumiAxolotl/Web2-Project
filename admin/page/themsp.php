@@ -69,15 +69,7 @@ if(isset($_POST['submit'])){
         <li>
         <label>Hình ảnh chính</label><input type="file" name="upload_file1" class=""> <br>
         </li>
-        <li>
-        <label>Hình ảnh phụ 1</label><input type="file" name="upload_file2" class=""> <br>
-        </li>
-        <li>
-        <label>Hình ảnh phụ 2</label><input type="file" name="upload_file3" class=""> <br>
-        </li>
-        <li>
-        <label>Hình ảnh phụ 3</label><input type="file" name="upload_file4" class=""> <br>
-        </li>
+
     </ul>
     
     

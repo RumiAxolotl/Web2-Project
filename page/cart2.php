@@ -104,6 +104,7 @@
        
     </div>
     <input type="submit" name="muahang" class="buybutton" value="ĐẶT HÀNG">
+
 </div>
 </div>
 </div>
@@ -112,9 +113,60 @@
 <?php }  } else{ ?>
 <img src="images/empty.png" class="emptycart">
 <h1 class="emptytxt">Hiện tại chưa có sản phẩm trong đơn hàng...</h1>
-<?php } ?>
-</div>
+<?php } 
 
+
+?>
+</div>
+<!-- ------------footer----------- -->
+
+    
+        <!-- ------------------- js for toggle menu-------------- -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else {
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="main.js"></script>
+            <script>
+                function tang(idsp,quantity,price,i) {
+                    
+                   // alert(idsp+i);
+                    $.ajax({
+                        type:"get",
+                        url:"./page/tang_giamsp.php",
+                        data:{idsp:idsp, quantity:quantity,price:price,i:i,action:"tang"},
+                        success: function(data){
+                          // alert(data);
+                            $(".row3").html(data);
+                        }
+                    })
+                  }
+                  function giam(idsp,quantity,price,i) {
+                    
+                    // alert(idsp+i);
+                     $.ajax({
+                         type:"get",
+                         url:"./page/tang_giamsp.php",
+                         data:{idsp:idsp, quantity:quantity,price:price,i:i,action:"giam"},
+                         success: function(data){
+                           // alert(data);
+                             $(".row3").html(data);
+                         }
+                     })
+                   }
+            </script>
 </body>
 
 </html>

@@ -11,10 +11,6 @@
                 include("./page/ajax.php");
                 break;
             }
-            case "locnangcao":{
-                include("./page/testform.php");
-                break;
-            }
             
             case "detail":{
                 include("./page/products_detail.php");

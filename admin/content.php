@@ -1,6 +1,11 @@
 <?php
 if(isset($_GET['action'])){
     switch($_GET['action']){
+        case "search":{
+            include("./page/search_ajax.php");
+            break;
+        }
+        
         case "quanlysp": {
             include("./page/quanlysp.php");
             break;
