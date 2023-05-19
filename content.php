@@ -15,12 +15,17 @@
                 include("./page/testform.php");
                 break;
             }
+            
             case "detail":{
                 include("./page/products_detail.php");
                 break;
             }
             
             case "account":{
+                include("./page/account.php");
+                break;
+            }
+            case "dangki":{
                 include("./page/account.php");
                 break;
             }
@@ -36,13 +41,12 @@
                 include("./page/search_ajax.php");
                 break;
             }
-            
-            case "test":{
-                include("modules/page/test.php");
-                break;
-            }
             case "cart":{
                 include("./page/cart1.php");
+                break;
+            }
+            case "cart2":{
+                include("./page/cart2.php");
                 break;
             }
             case "chonsp":{
@@ -71,7 +75,7 @@
                 break;
             }
             case "dathang":{
-                include("./page/xulydh.php");
+                include("./page/dathang.php");
                 break;
             }
             case "themkh":{
