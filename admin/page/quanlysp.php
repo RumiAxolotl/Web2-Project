@@ -8,9 +8,6 @@ $trang=$page->total_page();
 
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
-  </li>
   <li class="breadcrumb-item active">Quản lý sản phẩm</li>
 </ol>
 
@@ -18,7 +15,7 @@ $trang=$page->total_page();
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-users-cog"></i>
-    Bruh</div>
+    Thông tin sản phẩm</div>
   <div class="card-body">
 
   <button id="btnAdd"><a href="index.php?action=selection&act=them">Thêm sản phẩm</a></button>

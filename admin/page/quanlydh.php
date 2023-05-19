@@ -6,17 +6,14 @@
 
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
-  </li>
-  <li class="breadcrumb-item active">Quản lý don hang</li>
+  <li class="breadcrumb-item active">Quản lý đơn hàng</li>
 </ol>
 
 <!-- Area Chart Example-->
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-users-cog"></i>
-    Bruh</div>
+    Đơn hàng</div>
   <div class="card-body">
 
   <table style="border: 2px solid #2759BD; text-align: center; font-size: 14px; font-style: oblique";>
@@ -30,7 +27,7 @@
         <td style="border: 2px solid #2759BD;" width="250px" ><b>Ngày lập</b></td>
         <td style="border: 2px solid #2759BD;" width="200px" ><b>Tổng Tiền</b></td>
         <td style="border: 2px solid #2759BD;" width="200px" ><b>CTDH</b></td>
-        <td style="border: 2px solid #2759BD;" width="200px" ><b>Xu ly don hang</b></td>
+        <td style="border: 2px solid #2759BD;" width="200px" ><b>Xử lí đơn hàng</b></td>
 
     </tr>
     <?php include("connect.php"); 

@@ -16,7 +16,7 @@
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-users-cog"></i>
-    Bruh</div>
+    Chi tiết đơn hàng</div>
   <div class="card-body">
   <table  >
   <table width="1000px" class="tb_a2" >

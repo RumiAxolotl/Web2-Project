@@ -9,6 +9,10 @@ if(isset($_GET['action'])){
             include("./page/quanlykh.php");
             break;
         }
+        case "quanlynv": {
+            include("./page/quanlynv.php");
+            break;
+        }
         case "suasp": {
             include("./page/suasp.php");
             break;

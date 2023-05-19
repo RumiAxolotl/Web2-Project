@@ -44,11 +44,11 @@
             }
                 ?>
                  
-                 <?php`
+                 <?php
                 
             return $data;
         }
-        function aosomi1($theloai){
+        function banhkem1($theloai){
             include("admin/connect.php");
             $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='$theloai'";
             $result=$connect->query($sql);
@@ -56,7 +56,7 @@
             return $total;
         }
 
-        function aosomi($page,$theloai){
+        function banhkem($page,$theloai){
             include("admin/connect.php");
             $limit=8;
             $start=($page-1)*$limit;
@@ -79,13 +79,13 @@
                 
             return $data;
         }
-        function aophong($page){
+        function socola($page){
             include("admin/connect.php");
             $limit=8;
             $start=($page-1)*$limit;
            
             $data="";
-            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='Áo Phông'";
+            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='socola'limit $start,$limit";
             $result=action::select($sql);
             ?>
             
@@ -102,13 +102,13 @@
                 
             return $data;
         }
-        function aohoodie($page){
+        function tiramisu($page){
             include("admin/connect.php");
             $limit=8;
             $start=($page-1)*$limit;
            
             $data="";
-            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='Áo Hoodie'";
+            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='tiramisu'limit $start,$limit";
             $result=action::select($sql);
             ?>
             
@@ -125,13 +125,13 @@
                 
             return $data;
         }
-        function aokhoac($page){
+        function vani($page){
             include("admin/connect.php");
             $limit=8;
             $start=($page-1)*$limit;
            
             $data="";
-            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='Áo Khoác' limit $start,$limit";
+            $sql="SELECT * FROM `tbl_category`,`tbl_products` WHERE tbl_category.id_loai=tbl_products.id_loai AND tbl_category.ten_loai='vani' limit $start,$limit";
             $result=action::select($sql);
             ?>
             
@@ -156,7 +156,7 @@
             $start=($page-1)*$limit;
            
             $data="";
-            $sql="SELECT * FROM tbl_products ORDER BY `name` ASC limit $start,$limit";
+            $sql="SELECT * FROM tbl_products ORDER BY `price` ASC limit $start,$limit";
             $result=action::select($sql);
             ?>
             
