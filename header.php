@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAKERY Shop </title>
+    <title>TXG Shop </title>
     <link rel="stylesheet" href="css/style31.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/styleA.css">
@@ -49,26 +49,33 @@
                         <li><a href="index.php?action=info"><?=$_SESSION['name_cus']?></a></li>
                         
                         <?php } else{ ?>
-                            <li><a href="index.php?action=account">Đăng nhập / Đăng ký</a></li>
+                            <li><a href="index.php?action=account">Đăng nhập/Đăng ký</a></li>
                             
                 <?php } ?>
+                <li><i class="fab fa-facebook-f"></i></a></li>
+                <li><i class="fab fa-instagram"></i></a></li>
+                <li><i class="fab fa-twitter"></i></a></li>
+                <li><i class="fab fa-pinterest-p"></i></a></li>
             </ul>
         </div>
         <div class="row">
             <div class="header_top logo">
-                <a href="index.php"><img src="images/logo.jpg" style="width:200px ; height:100px" alt="logo"></a>
+                <a href="index.php"><img src="images/logo.jpeg" style="width:200px ; height:100px" alt="logo"></a>
             </div>
             <div class="header_top title">
                 <ul>
                     <li><a href="index.php">Trang Chủ</a></li>
                     <li><a href="index.php?action=productclassification">Sản Phẩm</a></li>
                     <li><a href="index.php?action=contact">Liên Hệ</a></li>
+                    
                 </ul>
             </div>
                 
             <div class="header_top search_1">
                 <ul>
-                <li class="header_top_1 fas"><a href="index.php?action=cart" class="btncart"><img src="images/cart.png" width="30px" height="30px"></a></li>
+                <li class="header_top_1 fas"><a href="index.php?action=cart2" class="btncart"><img src="images/cart.png" width="30px" height="30px"></a></li>
+                <img src="images/menu.png" class="menu-icon" 
+                onclick="menutoggle()">
                 </ul>
         </div>
     </div>

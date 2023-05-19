@@ -56,9 +56,11 @@
         <?php
         unset($_SESSION['idsp']);
         unset($_SESSION['tonghoadon']);
+        session_destroy($_SESSION['idsp']);
+
     }
    }
    else{
-       echo "that bai";
+       echo "Thất bại";
    }
 ?>

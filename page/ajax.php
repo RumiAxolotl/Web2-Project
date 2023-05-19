@@ -137,7 +137,7 @@
         phantrangsortgiam(1);
     }
 }
-function aosomi(page,theloai){
+function banhkem(page,theloai){
    
         $.ajax({
             type:"get",
@@ -157,20 +157,18 @@ function aosomi(page,theloai){
     
     function phanloaiChanged(obj){
         var value=obj.value;
-        if(value==='ADIDAS'){
-            aosomi(1,"ADIDAS");
+        if(value==='socola'){
+            banhkem(1,"socola");
         }
-        else if(value==='NIKE'){
-            aosomi(1,"NIKE");
+        else if(value==='tiramisu'){
+            banhkem(1,"tiramisu");
         }
-        else if(value==='PUMA'){
-            aosomi(1,"PUMA");
-        }else if(value==='GUCCI'){
-            aosomi(1,"GUCCI");
+        else if(value==='vani'){
+            banhkem(1,"vani");
         }
 }
 
-function hello(page){
+/* function hello(page){
     
     if($("#phanloai").val()==='Áo Sơ Mi'){
     aosomi(page,"Áo Sơ Mi");
@@ -186,7 +184,7 @@ function hello(page){
         aosomi(page,"Áo Khoác");
     }
 }
-
+ */
     
 // })
 

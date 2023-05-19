@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-2">
-                    <img src="images/whitechocolatecake.jpg" width="100%">
+                    <img src="images/image1.png" width="100%">
                 </div>
 
                 <div class="col-2">
@@ -51,29 +51,29 @@
                 var phoneformat = /((09|03|07|08|05)+([0-9]{8})\b)/g;
 
                 if(document.getElementById("user").value.length == 0){
-                    document.getElementById("error1").innerHTML = "Please type a username";
+                    document.getElementById("error1").innerHTML = "Vui lòng nhập tên tài khoản!";
                 } else{
                     document.getElementById("error1").innerHTML = "";
                 }
                 if(document.getElementById("pass").value.length == 0){
-                    document.getElementById("error2").innerHTML = "Do not leave password empty";
+                    document.getElementById("error2").innerHTML = "Mật khẩu không được để trống!";
                 } else{
                     document.getElementById("error2").innerHTML = "";
                 }
                 if(document.getElementById("name").value.length == 0){
-                    document.getElementById("error3").innerHTML = "No name received";
+                    document.getElementById("error3").innerHTML = "Chưa nhập tên!";
                 } else{
                     document.getElementById("error3").innerHTML = "";
                 }
                 if(document.getElementById("address").value.length == 0){
-                    document.getElementById("error4").innerHTML = "Where do you live?";
+                    document.getElementById("error4").innerHTML = "Bạn ở đâu?";
                 } else{
                     document.getElementById("error4").innerHTML = "";
                 }
                 if(document.getElementById("phone").value.match(phoneformat)){
                     document.getElementById("error5").innerHTML = "";
                 } else {
-                    document.getElementById("error5").innerHTML = "Number format bad";
+                    document.getElementById("error5").innerHTML = "Số không hợp lệ";
                 }
                 if((document.getElementById("user").value.length!=0) && 
                     (document.getElementById("pass").value.length!=0) && 
@@ -149,20 +149,20 @@
                         data:{username:username,password:password},
                         success:function(data){
                             if(data==1){
-                                alert("Dang nhap thanh cong");
+                                alert("Đăng nhập thành công");
                                 window.location.href="index.php";
                             }
                             else if(data==2){
-                                alert("Xin chao admin");
+                                alert("Xin chào admin");
                                 window.location.href="./admin/index.php";
                             }
                             else if(data==0){
-                                alert("Tai khoan da bi khoa");
+                                alert("Tài khoản đã bị khóa");
                                 window.location.href="index.php?action=account";
 
                             }
                             else{
-                                alert("Tai Khoan Hoac mat khau khong chinh xac!!!");
+                                alert("Tài khoản hoặc mật khẩu không chính xác!!!");
                                 window.location.href="index.php?action=account";
 
                             }
@@ -177,7 +177,7 @@
                     var address=$("#address").val();
                     var phone=$("#phone").val();
                     if(empty(user)){
-                        alert("ko");
+                        alert("Không hợp lệ");
                     }
                 })
             })

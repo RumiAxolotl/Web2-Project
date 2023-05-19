@@ -46,9 +46,12 @@
                     <td><div class="productSize"><?=$_SESSION['idsp'][$key]['size'][$i]?></div></td>
                     <td><div class="productColor"><?=$_SESSION['idsp'][$key]['color'][$i]?></div></td>
                     <td >
+<!--                         <div class="productColor"><?=$_SESSION['idsp'][$key]['quantity'][$i]?></div>
+ -->                        
                         <input type="text" class="<?=$_SESSION['idsp'][$key]['idsp1'][$i].[$i]?>" value="<?=$_SESSION['idsp'][$key]['quantity'][$i]?>">
                         <button onclick="giam(`<?=$_SESSION['idsp'][$key]['idsp1'][$i]?>`,`<?=$_SESSION['idsp'][$key]['quantity'][$i]?>`,`<?=$_SESSION['idsp'][$key]['price'][$i]?>`,`<?=$i?>`)" class="removebutton">-</button>
                         <button onclick="tang(`<?=$_SESSION['idsp'][$key]['idsp1'][$i]?>`,`<?=$_SESSION['idsp'][$key]['quantity'][$i]?>`,`<?=$_SESSION['idsp'][$key]['price'][$i]?>`,`<?=$i?>`)" class="addbutton">+</button>
+
                     </td>
                     <td><?=number_format($_SESSION['idsp'][$key]['tongtien'][$i],0,",",".")?> VNĐ</td>
                      
@@ -76,7 +79,7 @@
     <div>
 
     
-        <?php if(isset($_SESSION['dadangnhap'])){ ?>
+       <!--  <?php if(isset($_SESSION['dadangnhap'])){ ?>
 
             <form action="index.php?action=dathang" method="post" >
             <div class="container-checkouts">
@@ -111,7 +114,7 @@
     <?php }  } else{ ?>
     <img src="images/empty.png" class="emptycart">
     <h1 class="emptytxt">Hiện tại chưa có sản phẩm trong đơn hàng...</h1>
-    <?php } ?>
+    <?php } ?> -->
     </div>
 
 
