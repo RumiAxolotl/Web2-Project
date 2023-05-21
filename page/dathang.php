@@ -42,8 +42,8 @@
                 $sl=$row3['quantity']-$quantity;
                  
                     
-                 $sql4="UPDATE `tbl_product_size_color` SET `quantity`='$sl' WHERE id_product='$idsp' AND id_size='$id_size' AND id_color='$id_color'";
-                 $result4=$connect->query($sql4);
+                $sql4="UPDATE `tbl_product_size_color` SET `quantity`='$sl' WHERE id_product='$idsp' AND id_size='$id_size' AND id_color='$id_color'";
+                $result4=$connect->query($sql4);
                 $sql5="INSERT INTO `tbl_detail_order`(`id_order`, `id_product`, `size`, `color`, `quantity`, `price`, `total_money`) VALUES ('$id_order','$idsp','$size','$color','$quantity','$price','$total_money')";
                 $result5=$connect->query($sql5);
                 }    
